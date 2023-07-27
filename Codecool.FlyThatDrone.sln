@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codecool.FlyThatDrone", "Codecool.FlyThatDrone\Codecool.FlyThatDrone.csproj", "{780870AC-4444-406E-8666-35271EFF4542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codecool.FlyThatDroneTest", "Codecool.FlyThatDroneTest\Codecool.FlyThatDroneTest.csproj", "{8C0BE31F-8444-4E5E-9456-B1CDF84152CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{780870AC-4444-406E-8666-35271EFF4542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780870AC-4444-406E-8666-35271EFF4542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780870AC-4444-406E-8666-35271EFF4542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780870AC-4444-406E-8666-35271EFF4542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0BE31F-8444-4E5E-9456-B1CDF84152CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0BE31F-8444-4E5E-9456-B1CDF84152CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0BE31F-8444-4E5E-9456-B1CDF84152CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0BE31F-8444-4E5E-9456-B1CDF84152CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
