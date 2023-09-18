@@ -2,7 +2,7 @@
 using Codecool.FlyThatDrone.UI;
 
 
-IMovementEngine movementEngine = null;
+IMovementEngine movementEngine = new MovementEngine();
 
 FlyThatDroneUi ui = new FlyThatDroneUi(movementEngine);
 

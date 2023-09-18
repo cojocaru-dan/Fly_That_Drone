@@ -14,26 +14,39 @@ public class FlyThatDroneUi
 
     public void Run()
     {
-        var drone = new Drone(1, new Position(0, 0, 0));
+        List<Drone> drones = new List<Drone>
+        { 
+            new AirDrone(1, new Position(0, 0, 0)), 
+            new BasicGroundDrone(2, new Position(1, 1, 1)),
+            new DiagonalGroundDrone(3, new Position(2, 2, 2)),
+        };
 
-        var movements = new[] { "forward", "backwards", "up", "somewhere" };
-        Console.WriteLine($"Initial position for Drone #{drone.Id} {drone.Position}");
+        var movements = new[] { "forward", "backwards", "up", "somewhere", "backward-right"};
 
-        foreach (var movement in movements)
+        MoveDrones(drones, movements);
+    }
+
+    private void MoveDrones(List<Drone> drones, string[] movements)
+    {
+        foreach (Drone drone in drones)
         {
-            if (_movementEngine.Move(drone, movement))
+            Console.WriteLine($"Initial position for Drone #{drone.Id} {drone.Position}");
+
+            foreach (var movement in movements)
             {
-                Console.WriteLine($"Successful {movement} movement ");
-                Console.WriteLine($"New position for Drone #{drone.Id}: {drone.Position}");
+                if (_movementEngine.Move(drone, movement))
+                {
+                    Console.WriteLine($"Successful {movement} movement ");
+                    Console.WriteLine($"New position for Drone #{drone.Id}: {drone.Position}");
+                }
+                else
+                {
+                    Console.WriteLine($"Movement {movement} not possible ");
+                    Console.WriteLine($"Position unchanged for Drone #{drone.Id}: {drone.Position}");
+                }
             }
-            else
-            {
-                Console.WriteLine($"Movement {movement} not possible ");
-                Console.WriteLine($"Position unchanged for Drone #{drone.Id}: {drone.Position}");
-            }
+            Console.WriteLine("\n\n");
         }
-
-
         Console.ReadLine();
     }
 }

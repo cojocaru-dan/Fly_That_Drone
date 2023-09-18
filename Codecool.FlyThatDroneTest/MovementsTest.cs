@@ -8,8 +8,8 @@ public class MovementsTest
 
     private static object[] _movementCases =
     {
-        new object[] { "forward", InitialPosition, InitialPosition with { X = InitialPosition.X + 1 } },
-        new object[] { "backwards", InitialPosition, InitialPosition with { X = InitialPosition.X - 1 } },
+        new object[] { "forward", InitialPosition, InitialPosition with { Y = InitialPosition.Y + 1 } },
+        new object[] { "backwards", InitialPosition, InitialPosition with { Y = InitialPosition.Y - 1 } },
         new object[] { "left", InitialPosition, InitialPosition with { X = InitialPosition.X - 1 } },
         new object[] { "right", InitialPosition, InitialPosition with { X = InitialPosition.X + 1 } },
     };
